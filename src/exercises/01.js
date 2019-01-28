@@ -16,7 +16,7 @@ class Toggle extends React.Component {
   handleOnClick = () => {
     this.setState(
       prevState => ({on: !prevState.on}),
-      this.props.onToggle(this.state.on),
+      () => this.props.onToggle(this.state.on),
     )
   }
   // 💰 this.setState(newState, callback)
